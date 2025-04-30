@@ -75,20 +75,11 @@ export function docVerseVitePlugin(options: DocVerseVitePluginOptions = {}): Plu
           devServerHost: `http://localhost:${port}`,
           basePath: '/block'
         });
-        console.log({
-          projectConfig: projectInfo,
-          blockConfigMap: {
-            [blockInfo.blockTypeID]: blockInfo,
-          },
-          devServerHost: `http://localhost:${port}`,
-          basePath: '/block'
-        });
         server.middlewares.use((req, res, next) => {
           res.setHeader('Access-Control-Allow-Origin', new URL(url!).origin);
           res.setHeader('Access-Control-Allow-Methods', '*');
           res.setHeader('Access-Control-Allow-Headers', 'x-request-id');
           res.setHeader('Access-Control-Allow-Credentials', 'true');
-          console.log(req.url)
           if (req.url?.startsWith(BASE_PATH)) return next();
           middleware(
             { url: req.url! },
