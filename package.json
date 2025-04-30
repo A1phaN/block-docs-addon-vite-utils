@@ -1,0 +1,36 @@
+{
+  "name": "block-docs-addon-vite-utils",
+  "version": "1.0.0",
+  "types": "./types",
+  "main": "./lib/index.js",
+  "module": "./es/index.js",
+  "files": [
+    "lib",
+    "es",
+    "types",
+    "README.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@lark-opdev/cli": "^3.3.2",
+    "axios": "^1.2.3",
+    "colorette": "^2.0.19",
+    "cors": "^2.8.5",
+    "fs-extra": "^10.1.0",
+    "lodash.merge": "^4.6.2",
+    "open": "^8.4.0",
+    "query-string": "^7.1.1",
+    "vite": "^6.3.3"
+  },
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^12.1.2",
+    "@types/lodash.merge": "^4.6.9",
+    "@types/node": "^22.15.3",
+    "rollup": "^4.40.1",
+    "rollup-plugin-dts": "^6.2.1",
+    "rollup-plugin-license": "^3.6.0",
+    "tslib": "^2.8.1",
+    "typescript": "^5.8.3"
+  }
+}
